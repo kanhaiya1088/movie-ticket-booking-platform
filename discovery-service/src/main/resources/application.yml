@@ -1,0 +1,21 @@
+# Server config properties
+server:
+  port: 20000
+  protocol: http
+
+spring:
+  application:
+    name: discovery-service
+  boot:
+    admin:
+      context-path: /admin
+      client:
+        url: http://localhost:20000/admin
+
+
+# Eureka Config Properties
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+

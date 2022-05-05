@@ -1,0 +1,28 @@
+server:
+  port: 20010
+
+spring:
+  application:
+    name: bms-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:20000/admin
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: book_my_show
+#      port: 27017
+#      host: localhost
+
+# Eureka Config Properties
+eureka:
+  client:
+    #prefer-same-zone-eureka: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
+    instance:
+      hostname: localhost

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    kubernates:
+      enabled: false
+    config:
+      enabled: false
+---

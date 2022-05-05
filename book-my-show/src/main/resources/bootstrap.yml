@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: bms-service
+  cloud:
+    kubernates:
+      enabled: false
+    config:
+      enabled: false
+---

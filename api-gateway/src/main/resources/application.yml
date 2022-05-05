@@ -1,0 +1,29 @@
+server:
+  port: 20001
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: bms-service
+          uri: lb://bms-service
+          predicates:
+            - Path=/bms/**
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:20000/admin
+
+# Eureka Config Properties
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
+    instance:
+      hostname: localhost
+
